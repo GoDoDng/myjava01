@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/echarts.common.min.js"></script>
+</head>
+<body>
+	<div id="box" style="width: 700px;height: 500px"></div>
+
+	<script type="text/javascript">
+		var mychart = echarts.init(document.getElementById('box'));
+	
+		mychart.setOption({
+			title : {
+				text : '水果销售信息'
+			},
+			tooltip : {},
+			legend : {
+				data : [ "销售量", "访问量" ]
+			},
+			xAxis : {
+				data : [ "小米", "华为", "三星", "苹果", "其他" ]
+			},
+			yAxis : {},
+			series : [
+				{
+					name : "销售量",
+					type : "bar",
+					data : [ 55, 22, 51, 51, 66 ]
+				},
+				{
+					name : "访问量",
+					type : "bar",
+					data : [ 44, 23, 66, 23, 22 ]
+				}
+			]
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/echarts.common.min.js"></script>
+</head>
+<body>
+	<div id="box" style="width: 700px;height: 500px"></div>
+
+	<script type="text/javascript">
+		var mychart = echarts.init(document.getElementById('box'));
+	
+		mychart.setOption({
+			title : {
+				text : "饼状图实验"
+			},
+			tooltip : {},
+			series : [ {
+				name : "销量",
+				type : "pie",
+				data : [
+					{
+						value : 80,
+						name : "苹果"
+					},
+					{
+						value : 100,
+						name : "香蕉"
+					},
+					{
+						value : 100,
+						name : "橘子"
+					} ]
+			} ]
+		});
+	</script>
+</body>
+</html>
